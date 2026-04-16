@@ -1,4 +1,4 @@
-
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: conference-webapp
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: web-container
-        image: premnath0210/conference-app:latest # Replace with your DockerHub tag
+        image: premnath0210/conference-app:latest
         ports:
         - containerPort: 80
 ---
@@ -31,4 +31,4 @@ spec:
   ports:
     - port: 80
       targetPort: 80
-      nodePort: 30007 # The application will be visible at <NodeIP>:30007
+      nodePort: 30007
